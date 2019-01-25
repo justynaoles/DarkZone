@@ -1,0 +1,338 @@
+@import '_variables';
+@import '_mixins';
+
+
+.header {
+
+    background-color: $light-gr;
+    width: 100%;
+    z-index: 3;   
+}
+
+.menu {
+
+    width:100%;
+    height: auto;
+    position: fixed;
+    @include big-media-width();
+    z-index: 2;
+    background-color: $light-gr;
+
+    @media (min-width: $small) {
+        position: relative;
+        
+    }
+}
+
+.menu-show {
+
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(57, 60, 70, 0.6);
+
+}
+
+.top-row {
+
+    position: relative;
+    min-height: 64px;
+    padding: $small-padding;
+    background-color: $light-gr;
+    @include big-media-width();
+
+        @media (min-width: $small) {
+
+            min-height: 128px;
+            padding: $medium-padding;
+        }
+
+        @media (min-width: $large)  {
+
+            padding: 0;
+            min-height: 156px;
+        }    
+}
+
+.img-logo {
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 35px;
+    width: 140px;
+    background-image: url('../logo/logomob.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (min-width: $small) {
+
+        height: 95px;
+        width: 165px;
+        background-image: url('../logo/foobologo.svg');
+    }
+
+    a {
+        display: block;
+        height: 100%;
+    }
+}
+
+.hamburger {
+
+    height: 100%; 
+    width: 69px; 
+    cursor: pointer;
+    right: 0;
+    top:0;
+    position: absolute;
+
+    @media (min-width: $small) {
+
+        display:none;
+    }
+
+    &:before {
+
+        display: block;
+        content: "";
+        height: 40px;
+        width: 1px;
+        background-color: $white;
+        float: left;
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        transition: all 1s;
+}
+
+    .lines-wrapper {
+
+        height: 40px; 
+        width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+}
+    
+    .topline, .midline, .bottline {
+
+    position: absolute;
+    left: 22px;
+    display: block;
+    width: 24px;
+    height: 5px;
+    background-color: $white;
+    transition: all 400ms cubic-bezier(0.84, 0.06, 0.52, 1.8);
+    margin-top: 17px;
+    border-radius: 3px;
+}
+
+    .topline {
+
+    transform: translateY(-8px);
+    animation-delay: 100ms;
+    }
+
+    .bottline{
+
+    transform: translateY(8px);
+    animation-delay: 250ms;
+    }   
+
+   .rotateplus {
+
+    transform: rotate(40deg);
+    }
+
+    .hide {
+
+    opacity: 0;
+    }
+
+    .rotateminus {
+
+    transform: rotate(-40deg);
+    }
+}
+
+.active {
+
+    background-color: $dark-gr;
+
+    &::before {
+
+        background-color: $dark-gr;
+    }
+}
+
+.nav {
+
+    @include big-media-width();
+    display: none;
+    background-color: $dark-gr;
+
+    @media (min-width: $small) {
+        padding: 0 8% 0 0;
+        display: block;
+        position: absolute;
+        background-color: transparent;
+        bottom: 0;
+        right:0;
+    }
+
+
+    @media (min-width: $large) {
+
+        padding: 0;
+    }
+
+    a:hover {
+        
+        color: $light-blue;
+    }
+
+}
+        
+    .ulcontent {
+
+        color: $white;
+        font-size: 18px;
+        line-height: 26px;
+        line-height: 22px;
+        text-align: center;
+  
+        @media (min-width:1000px) {
+
+            text-align: right;
+        }
+    }
+
+    .dropdown {
+
+        @media (min-width: $small) {
+
+                &:hover {
+
+                    .submenu {
+
+                        display:block;
+                    }
+            }   
+        }
+    }
+
+    .level1 {
+
+        border-bottom: 1px solid #3a4541;
+
+        a { 
+            padding: 18px 0;
+        }
+
+        @media (min-width: 1000px ){
+
+            border-bottom: 0px;
+            display: inline-block;
+            position: relative;
+
+                &:hover {
+                    background-color: $dark-gr;
+                }
+
+                a {
+                    padding: 20px 21px 22px 21px;
+                }
+        }
+
+    }
+
+    .level1.logg {
+
+        display: none;
+        @media (min-width: 1000px) {
+
+            display: inline-block;
+
+            a {
+                padding: 20px 12px 21px 12px;
+            }
+        }
+    }
+
+   
+    .blue-arrow::before {
+
+        font-family: $font-awesome;
+        content: "\f078";
+        font-size:15px;
+      
+    }
+
+    .log-in::before {
+
+        font-family: $font-awesome;
+        content: "\f007";
+        font-size: 20px;
+        
+    }
+
+    .submenu {
+
+        display:none;
+        font-size: 16px;
+        background-color: $medium-gr;
+        font-size: 16px;
+        line-height: 26px;
+
+       .level2:first-of-type {
+
+           border-top: 1px solid #3a4541;
+       }
+
+       .level2:last-of-type {
+
+           border-bottom: 0px;
+       }
+
+        @media (min-width: $small) {
+
+                position: absolute;
+                right: 0;
+                padding: 0 3px;
+                text-align: left;
+                min-width: 195px;
+                background-color: $dark-gr;
+            
+                .level2:first-of-type {
+
+                    border-top: 0px;
+                }
+        }
+
+       .level2 {
+
+        border-bottom: 1px solid #3a4541;
+
+        a { 
+
+           min-height: 50px;
+           font-size: 16px;
+           line-height: 50px;
+        }
+
+        @media (min-width: $small ){
+
+                a {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+    
+.show {
+
+    display: block;
+}
+
+
+

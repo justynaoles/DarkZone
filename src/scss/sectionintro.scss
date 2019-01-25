@@ -1,0 +1,84 @@
+@import '_variables';
+@import '_mixins';
+
+.intro {
+
+    margin-top: 21px;
+    letter-spacing: 0.2px;
+
+    @media (min-width: $small) {
+
+        padding: 0 10%;
+        margin-top: 40px;
+    }
+
+    @media (min-width: $large) {
+        
+        width: 1420px;
+        margin: 40px auto;
+        padding: 0;
+    }
+}
+
+.intro-wrapper {
+
+    box-sizing: content-box;
+    margin: 0 auto;
+    background-color: $lightest-gr;
+    padding: 20px 3% 20px 4%;
+    margin: 0 4%;
+
+    @media (min-width: $small) {
+
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .intro-text {
+
+        padding-bottom: 56px;
+
+        @media (min-width: $small) {
+
+            padding: 21px 1.5% 31px 1.5%;
+        }
+    }
+
+    .header-intro {
+
+        font-size: 32px;
+        line-height: 41px;
+        font-weight: 500;
+        color: $light-gr;
+    }
+
+    .paragraph-intro {
+
+        font-size: 18px;
+        line-height: 26px;
+        color: $light-grey;
+        font-weight: 400;
+        padding-top: 20px;
+    }
+}
+
+.button-intro {
+
+    padding: 16px 66px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: $pink;
+    color: $white;
+    border: 0px;
+    margin: 0 auto;
+    display: block;
+
+    @media (min-width: $small) {
+
+        align-self: center;
+        margin-right: 22px;
+    }
+}

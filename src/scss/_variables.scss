@@ -1,0 +1,39 @@
+//fonts
+@font-face {
+    font-family: FontAwesome;
+    src: url('../fonts/fontawesome-webfont.ttf');
+}
+
+//background-colors
+$dark-gr: #1d2027;
+$medium-gr: #22252e;
+$light-gr: #393c46;
+$lightest-gr: #ededed;
+$footer-gr: #2a2d35;
+
+$pink: #f34f66;
+$blue: #29c4b7;
+$purple: #9e47b4;
+$green: #58b222;
+$orange:#ff7200;
+$transparent: rgba(124,132,154,0.6);
+
+//fonts color
+$white: #FFFFFF;
+$light-blue: #adfff1;
+$light-grey: #676767;
+$lazur: #29c4b7;
+$error: #c42955;
+
+//font family 
+$font-awesome: 'FontAwesome';
+
+//paddings 
+$small-padding: 0 8%;
+$medium-padding: 0 10%;
+
+
+//media device
+$small: 1000px;
+$medium: 1400px;
+$large: 1780px;

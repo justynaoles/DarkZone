@@ -1,0 +1,35 @@
+@import '_variables';
+
+//paddings for big width
+@mixin big-media-width() {
+
+    @media(min-width: $large) {
+
+        width: 1420px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+//button colors
+@mixin btn-bg($bg-color) {
+
+    background-color: $bg-color
+}
+
+//slider
+@mixin slider() {
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: -1;
+    background-size: cover;
+    background-position: 60%;
+
+    @media(min-width: $small) {
+        background-position: 0 70px;
+    }
+}

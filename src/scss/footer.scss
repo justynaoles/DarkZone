@@ -1,0 +1,186 @@
+@import '_variables';
+@import '_mixins';
+
+.footer {
+
+    background-color: $footer-gr;
+    color: $white;
+    padding: 35px 0 25px 0;
+}
+
+.footer-wrapper {
+
+    @include big-media-width();
+
+    @media (min-width: $small) {
+
+        display: block;
+        overflow: hidden;
+        padding: 0 10%;
+    }
+
+    @media (min-width: $medium) {
+
+        margin: 0 auto;
+        
+    }
+
+    @media (min-width: $large) {
+
+        position: relative;
+        padding: 0;
+    }
+
+}
+
+.footer-menu {
+
+    overflow: hidden;
+    display: none;
+    float: left;
+    min-width: 540px;
+
+    @media (min-width: $small) {
+
+        display: block;
+    }
+}
+
+.footer-header {
+
+    font-size: 18px;
+    line-height: 26px;
+    padding-top:21px;
+    display:block;
+}
+
+.footer-li {
+
+    display: flex;
+    align-items: flex-end;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-left: 15px;
+
+    &::before {
+        font-family: $font-awesome;
+        content: "\F1D0";
+        display: inline-block;
+        color: $orange;
+        margin-right:7px;
+    }
+}
+
+.menu-1 {
+
+    float: left;
+    padding-right: 55px;
+}
+
+.logo-media-wrapper {
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    @media (min-width: $small) {
+        align-items: flex-end;
+    }
+}
+
+.footer-logo {
+
+    height: 95px;
+    width: 165px;
+    // margin-bottom: 56px;
+    background-image: url('../logo/foobologo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    a {
+        display: block;
+        height: 100%;
+    }
+
+    @media (min-width: $large) {
+        
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50px;
+    }
+}
+
+.socialmedia {
+
+    display: flex;
+    padding-bottom: 35px;
+}
+
+.socialmedia-icon {
+
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    width: 32px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.facebook {
+
+    background-image: url('../icons/fbmono.png');
+    background-position: center;
+    transition: all 1s;
+
+    &:hover {
+        background-image: url('../icons/fbcolor.png');
+    }
+}
+
+.google {
+
+    background-image: url('../icons/glmono.png');
+    background-position: center;
+    transition: all 1s;
+
+    &:hover {
+        background-image: url('../icons/glcolor.png');
+    }
+}
+
+.pinterest {
+    
+    background-image: url('../icons/pintmono.png');
+    background-position: center;
+    transition: all 1s;
+
+    &:hover {
+        background-image: url('../icons/pintcolor.png');
+    }
+}
+
+.instagram {
+
+    background-image: url('../icons/instmono.png');
+    background-position: center;
+    transition: all 1s;
+
+    &:hover {
+        background-image: url('../icons/instcolor.png');
+    }
+}
+
+.youtube {
+
+    background-image: url('../icons/ytmono.png');
+    background-position: center;
+    transition: all 1s;
+
+    &:hover {
+        background-image: url('../icons/ytcolor.png');
+    }
+}
