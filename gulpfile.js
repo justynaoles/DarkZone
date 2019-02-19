@@ -8,6 +8,7 @@ let sass = require('gulp-sass');
 let concat = require('gulp-concat');
 let cleanCSS = require('gulp-clean-css');
 const minify = require('gulp-babel-minify');
+const babel = require('gulp-babel');
 
 sass.compiler = require('node-sass');
 
@@ -63,6 +64,9 @@ gulp.task('scripts', () => {
       keepClassNames: true
     }
   }))
+  .pipe(babel({
+    presets: ['@babel/env']
+}))
   .pipe(gulp.dest('./dist/js'));
 });
 
